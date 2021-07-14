@@ -14,8 +14,9 @@ const Calculator = () => {
     <View style={{padding: 10}}>
       <TextInput
         style={{height: 40, borderColor:"#000000", borderWidth:1}}
-        placeholder="Firstname"
+        placeholder="Enter Number"
         onChangeText={text => setA(text)}
+        keyboardType="numeric"
       />
       <Picker
         selectedValue={selectedValue}
@@ -29,10 +30,12 @@ const Calculator = () => {
       </Picker>
       <TextInput
         style={{height: 40, borderColor:"#000000", borderWidth:1}}
-        placeholder="Lastname"
+        placeholder="Enter Number"
         onChangeText={text => setB(text)}
+        keyboardType="numeric"
       />
-      <Button title="Click me!!!" onPress={ calculate } />
+      <View style={{height: 10}}/>
+      <Button title="calculate" onPress={ calculate } />
     </View>
   );
 }
